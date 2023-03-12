@@ -14,15 +14,15 @@ for(let i=1;  i<500; i++){
 	sum+=i
 	count+=1
 };
-console.log(sum/count);
 
+console.log(sum/count);
 let summa=0;
 for(let i=30; i<80; i++){
 	if(i%2 === 0);
 	summa +=i	
 }
-console.log(summa);
 
+console.log(summa);
 for(let i=100; i<300; i++){
 	if(i%3 ===0)
 	console.log(i)
