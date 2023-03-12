@@ -1,11 +1,13 @@
 let a = '';
-for(let i = 10; i < 20; i++) a += i + ',';
+for(let i = 10; i < 20; i++) {
+	a += i + ',';
+};
 console.log(a);
 
 let b = '';
-for(let i = 15; i < 35; i++) {
-b += i + ','
-Math.pow(i, 2)};
+for(let i = 15; i < 35; i++) {	
+	b += Math.pow(i, 2) + ','
+};
 console.log(b);
 
 let sum = 0;
@@ -23,7 +25,7 @@ for(let i = 30; i < 80; i++) {
 console.log(result);
 
 for(let i = 100; i < 300; i++) {
-	if(i % 3 === 0)
+	if(i % 2 !== 0)
 	console.log(i)
 }
 
