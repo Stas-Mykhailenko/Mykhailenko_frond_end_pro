@@ -5,7 +5,7 @@ for(let i = 10; i <= 20; i++) {
 console.log(a);
 
 let b = '';
-for(let i = 15; i <= 35; i++) {	
+for(let i = 10; i <= 20; i++) {	
 	b += Math.pow(i, 2) + ','
 };
 console.log(b);
