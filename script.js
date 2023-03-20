@@ -1,19 +1,36 @@
-// first task
-let arr = [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
 
+let arr = [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
+//  Знайти суму та кількість позитивних елементів.
 let sum = 0;
-arr.forEach(function(number){
+arr.forEach(function(number) {
 if( number > 0 ) {
 	sum += number;
 };
 });
 console.log(sum);
+// Знайти мінімальний елемент масиву та його порядковий номер.
+let minNumb = arr [0];
+arr.forEach(function(number){
+	if(number > minNumb){
+		minNumb = number;
+	}
+});
+console.log(arr.indexOf(minNumb), minNumb);
+// Можно ли так решить?
+// console.log(Math.min(...arr), arr.indexOf(Math.min(...arr)));
 
-// second task
-console.log(Math.min(...arr), arr.indexOf(Math.min(...arr)));
-// third task
-console.log(Math.max(...arr), arr.indexOf(Math.max(...arr)));
-// fourth task
+// Знайти максимальний елемент масиву та його порядковий номер.
+let maxNumb = arr [0];
+arr.forEach(function(number){
+	if(number < maxNumb){
+		maxNumb = number;
+	}
+});
+console.log(arr.indexOf(maxNumb), maxNumb);
+// Можно ли так решить?
+// console.log(Math.max(...arr), arr.indexOf(Math.max(...arr)));
+
+// Визначити кількість негативних елементів.
 let amount = 0;
 arr.forEach(function(number){
 	if( number < 0 ){
@@ -21,7 +38,7 @@ arr.forEach(function(number){
 	}
 });
 console.log(amount);
-// fifth task
+// Знайти кількість непарних позитивних елементів.
 let result = 0;
 arr.forEach(function(number){
 	number > 0 
@@ -30,7 +47,7 @@ arr.forEach(function(number){
 	}
 });
 console.log(amount);
-// sixth task
+// Знайти кількість парних позитивних елементів.
 let result2 = 0;
 arr.forEach(function(number){
 	number > 0 
@@ -39,7 +56,7 @@ arr.forEach(function(number){
 	}
 });
 console.log(amount);
-// seventh task
+// Знайти суму парних позитивних елементів.
 let sumNumbers = 0;
 arr.forEach(function(number){	
 	if(number > 0 && number % 2 === 0) {
@@ -47,7 +64,7 @@ arr.forEach(function(number){
 	}
 })
 console.log(sumNumbers);
-// eighth task
+// Знайти суму непарних позитивних елементів
 let sumNumber = 0;
 arr.forEach(function(number){	
 	if(number > 0 && number % 3 === 0) {
@@ -55,7 +72,7 @@ arr.forEach(function(number){
 	}
 })
 console.log(sumNumber);
-// ninth task
+// Знайти добуток позитивних елементів.
 let product = 1;
 arr.forEach(function(number) {	
 	if( number > 0 ) {
@@ -63,8 +80,7 @@ arr.forEach(function(number) {
 	}
 })
 console.log(product);
-// tenth task
-let maxArr = Math.max(...arr);
+// Знайти найбільший серед елементів масиву, остальні обнулити.
 let array = arr.map(function(number) {
 	if(Math.max(...arr) !== number) {
 	return number = 0
