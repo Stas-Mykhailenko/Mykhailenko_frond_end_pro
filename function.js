@@ -35,5 +35,3 @@ let calculator = {
 calculator.read()
 console.log("Sum",calculator.sum())
 console.log("Mul",calculator.mul())
-console.log(calculator)
-console.log(calculator.a)
