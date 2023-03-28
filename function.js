@@ -14,3 +14,26 @@ function factorialNumber(element) {
   return arr.join();
 }
 console.log(factorialNumber(arr));
+// 2)Створіть об’єкт calculator з трьома методами:
+
+// read() запитує два значення та зберігає їх як властивості об’єкта з іменами a та b відповідно.
+// sum() повертає суму збережених значень.
+// mul() множить збережені значення і повертає результат.
+let calculator = {
+  read(){
+    this.a = parseInt(prompt("Первое число", 0));
+    this.b = parseInt(prompt("Второе число",0));
+  },
+  sum(){
+    return this.a + this.b
+  },
+  mul(){
+    return this.a * this.b
+  }
+};
+57
+calculator.read()
+console.log("Sum",calculator.sum())
+console.log("Mul",calculator.mul())
+console.log(calculator)
+console.log(calculator.a)
