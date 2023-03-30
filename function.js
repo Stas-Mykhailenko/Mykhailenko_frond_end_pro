@@ -10,16 +10,12 @@
 
 // Должно работать с любыми значениями
 const yourFunc = (arr) =>{
-	let array = [];
-	array.push(arr[0]);
-	console.log(array)
+	let array = [arr[0]];
 	arr.forEach(element => {
-		if(array.includes(element) !== array.includes(element))
+		if(arr.includes(element) !== array.includes(element))
 		array.push(element)
-		console.log (element)
 	});
 	return array
 }
 const arr1 = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
-yourFunc(arr1); // [1,2,3,4,5]
 console.log(yourFunc(arr1));
