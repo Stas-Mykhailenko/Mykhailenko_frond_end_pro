@@ -9,7 +9,6 @@ function findFirstletter(arr) {
     if (arr[i][x] !== arr[i + 1][x]) {
       break;
     }
-    console.log(i)
     if (i === arr.length - 2) {
       result += arr[0][x];
       i = -1;
