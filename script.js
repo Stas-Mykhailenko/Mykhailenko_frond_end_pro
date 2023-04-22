@@ -6,13 +6,14 @@ function findFirstletter(arr) {
   let x = 0;
   let result = "";
   for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i][x] !== arr[i + 1][x] || arr[i] === undefined ) {
+    if (arr[i][x] !== arr[i + 1][x]) {
       break;
     }
+    console.log(i)
     if (i === arr.length - 2) {
       result += arr[0][x];
-      x++;
-      i = 0;
+      i = -1;
+      x ++;  
     }
   }
   return result;
