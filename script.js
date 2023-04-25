@@ -94,8 +94,8 @@ class Hamburger {
   }
 }
 
-let b = new Hamburger(SIZE_SMALL, STUFFING_CHEESE);
-b.addtopping(TOPPING_MAYO)
+let hamburger = new Hamburger(SIZE_SMALL, STUFFING_CHEESE);
+hamburger.addtopping(TOPPING_MAYO)
   .addtopping(TOPPING_MAYO)
   .deletetopping(TOPPING_SAUCE);
 console.log(b.showorder());
