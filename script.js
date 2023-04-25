@@ -98,4 +98,4 @@ let hamburger = new Hamburger(SIZE_SMALL, STUFFING_CHEESE);
 hamburger.addtopping(TOPPING_MAYO)
   .addtopping(TOPPING_MAYO)
   .deletetopping(TOPPING_SAUCE);
-console.log(b.showorder());
+console.log(hamburger.showorder());
