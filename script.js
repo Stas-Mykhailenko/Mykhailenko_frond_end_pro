@@ -47,9 +47,56 @@ if(this.order["sauce"] !== 0 && topping === "sauce"){
 }
 return this
 }
+showorder(){
+	if(this.size==="small"){
+		this.cal += 20
+		this.price +=50
+		switch(this.stuffing){
+			case STUFFING_CHEESE:
+				this.cal += 20;
+		      this.price +=10;
+				break;
+			case STUFFING_SALAD:
+				this.cal += 5;
+		      this.price +=20;
+				break;
+			case	STUFFING_POTATO:
+				this.cal += 10;
+		      this.price +=15;
+				break;
+		}
+	}
+	if(this.size==="big"){
+		this.cal += 40
+		this.price +=100
+		switch(this.stuffing){
+			case STUFFING_CHEESE:
+				this.cal += 20;
+		      this.price +=10;
+				break;
+			case STUFFING_SALAD:
+				this.cal += 5;
+		      this.price +=20;
+				break;
+			case	STUFFING_POTATO:
+				this.cal += 10;
+		      this.price +=15;
+				break;
+		}
+	}
+let order ={
+	"nameSandwich": "Humburger",
+	"stuffing":this.stuffing,
+	"topping":this.order,
+	"calories": this.cal,
+	"price":this.price
+}
+return order
+
+}
 }
 	
 
 let b = new Hamburger(SIZE_SMALL,STUFFING_CHEESE);
 b.addtopping(TOPPING_MAYO).addtopping(TOPPING_MAYO).deletetopping(TOPPING_SAUCE)
-console.log(b)
+console.log(b.showorder())
