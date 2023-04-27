@@ -70,17 +70,17 @@ class Hamburger {
   }
   showOrder() {
     console.log(
-      "Размер гамбургера " + this.size.name,
-      "Начинка " + this.stuffing.name,
-      "Каллорийность " + this.cal,
-      "Цена " + this.price
+      `Размер гамбургера ${this.size.name}`,
+      `Начинка ${this.stuffing.name}`,
+      `Каллорийность ${this.cal}`,
+      `Цена ${this.price}`
     );
   }
   showCalories() {
-    console.log("Каллорийность " + this.cal);
+    console.log(`Каллорийность ${this.cal}`);
   }
   showPrice() {
-    console.log("Цена " + this.price);
+    console.log(`Цена ${this.price}`);
   }
 }
 
