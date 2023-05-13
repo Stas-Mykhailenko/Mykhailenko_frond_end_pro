@@ -6,7 +6,69 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
-<body>
+<body class="body">
+	<style>
+		.slider{
+			
+			width: 350px;
+			height: 450px;
+			position: absolute;
+			overflow: hidden;
+		}
+		.conteiner{
+			display: flex;
+			position: relative;
+			top: 0px;
+			left: 0px;
+			transition: left 1s;
+		
+		}
 	
+		.button{
+			position: relative;
+			left: 50px;
+			top: 370px;
+		}
+		#slideleft{
+			display: inline;
+		}
+		#slideright{
+			display: inline;
+		}
+	</style>
+	<div class="slider">
+		<div class="conteiner">
+			<div class="slide1">
+				<img src="./img/1.jpg" alt="" width="350" height="350">
+			</div>
+			<div class="slide2">
+				<img src="./img/2.jpg" alt=""  width="350" height="350">
+			</div >
+			<div class="slide3">
+				<img src="./img/3.jpg" alt=""  width="350" height="350">
+			</div>
+			<div class="slide4">
+				<img src="./img/4.jpg" alt=""  width="350" height="350">
+			</div>
+			<div class="slide5">
+				<img src="./img/6.jpg" alt=""  width="350" height="350">
+			</div class="slide6">
+			<div class="slide1">
+				<img src="./img/7.jpeg" alt=""  width="350" height="350">
+			</div>
+			<div class="slide7">
+				<img src="./img/8.jpg" alt=""  width="350" height="350">
+			</div >
+			<div class="slide8">
+				<img src="./img/5.jpg" alt=""  width="350" height="350">
+			</div>	
+		</div>
+	</div>
+	<div class="button"> 
+		<button id="slideleft" type="button">Slide left</button>
+		<button id="slideright" type="button">Slide right</button>
+	</div>
+	
+	<script src="./scripy.js"></script>
 </body>
 </html>
