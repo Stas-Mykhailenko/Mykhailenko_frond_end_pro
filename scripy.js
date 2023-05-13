@@ -6,6 +6,7 @@ slideright.addEventListener("click", () => {
   if (positionleft !== -2450) {
     positionleft -= 350;
     conteiner.style.left = positionleft + "px";
+	 slideleft .style.display = "inline";
   }
   if (positionleft === -2450) {
     slideright.style.display = "none";
@@ -16,5 +17,8 @@ slideleft.addEventListener("click", () => {
     positionleft += 350;
     conteiner.style.left = positionleft + "px";
     slideright.style.display = "inline";
+  }
+  if(positionleft === 0){
+	slideleft .style.display = "none";
   }
 });
