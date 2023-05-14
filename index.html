@@ -179,6 +179,13 @@
 		}
 		#error{
 			display: none;
+			font-size: large;
+			color: red;
+		}
+		.attention{
+			display: none;
+			font-size: large;
+			margin-top: 20px;
 			color: red;
 		}
     </style>
@@ -298,11 +305,11 @@
 
       <label for="quantity">Кількість продукції, що купується:</label>
       <input type="text" id="quantity" name="quantity" required />
-		<label for="quantity"> В поле можно вводити тільки цифри</label>
-      <label id = "error" for="comment">Коментар до замовлення:</label>
+		<div id="error">В поле можно вводити тільки цифри</div> 
+      <label id = "comment" for="comment">Коментар до замовлення:</label>
       <textarea id="comment" name="comment"></textarea>
-		<button id="buttonreg" type="submit">Зареєструватися</button>
-      <!-- <input id="buttonreg" type="submit" value="Зареєструватися" /> -->
+		<button id="buttonreg" type="button">Зареєструватися</button>
+      <div class="attention">ВВЕДИТЕ ВСЕ ПОЛЯ !!! </div>
     </form>
     <script src="./script.js"></script>
   </body>

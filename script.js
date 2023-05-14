@@ -17,11 +17,12 @@ const post_office3 = document.querySelector("#post_office3");
 const payment_card = document.querySelector("#payment_card");
 const payment_card2 = document.querySelector("#payment_card2");
 const quantity = document.querySelector("#quantity");
-const error = document.querySelector("#quantity");
-const buttonreg = document.querySelector("#error");
-let nameInput;
-let quantityInput;
-let choisePay;
+const error = document.querySelector("#error");
+const buttonreg = document.querySelector("#buttonreg");
+const attention =document.querySelector(".attention");
+let nameInput=null;
+let quantityInput=null;
+let choisePay=null;
 
 jameson.addEventListener("click", () => {
   dropdown.style.display = "none";
@@ -78,26 +79,28 @@ payment_card2.addEventListener("click", () => {
 });
 
 quantity.addEventListener("input", () => {
-  if (quantity.value === !isNaN) {
+
+  if (!isNaN(quantity.value)) {
     quantityInput = quantity.value;
     error.style.display = "none";
   } else {
     error.style.display = "block";
+   
   }
 });
 
 buttonreg.addEventListener("click", () => {
-  form.style.display = "none";
-  buyinfo.style.display = "inline-block";
-  setTimeout(() => {
-    buyinfo.style.display = "none";
-    dropdown.style.display = "flex";
-  }, 3000);
+  if( quantityInput !== null && nameInput !== null && choisePay !== null){
+    console.log(quantityInput)
+    console.log(nameInput)
+    form.style.display = "none";
+    buyinfo.style.display = "inline-block";
+    attention.style.display = "none"
+    setTimeout(() => {
+      buyinfo.style.display = "none";
+      dropdown.style.display = "flex";
+    }, 3000);
+  }else{attention.style.display = "block"}
+ 
 });
 
-// product1.style.display = "none";
-// buyinfo.style.display = "inline-block";
-// setTimeout(() => {
-//   buyinfo.style.display = "none";
-//   dropdown.style.display = "flex";
-// }, 1500);
