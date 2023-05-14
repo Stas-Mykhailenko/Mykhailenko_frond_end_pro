@@ -7,6 +7,219 @@
 	<title>Document</title>
 </head>
 <body>
+	<style>
+		.body{
+		position: relative;
+	}
+	.dropbtn1 {
+		 background-color: #4CAF50;
+		 color: white;
+		 padding: 16px;
+		 font-size: 16px;
+		 border: none;
+	}
+	.dropbtn2 {
+		 background-color: #4CAF50;
+		 color: white;
+		 padding: 16px;
+		 font-size: 16px;
+		 border: none;
+	}
+	.dropbtn3 {
+		 background-color: #4CAF50;
+		 color: white;
+		 padding: 16px;
+		 font-size: 16px;
+		 border: none;
+	}
+	.menu{
+		display: flex;
+		flex-direction: column;
+	}
+	.dropdown {
+	    display:  inline-block;
+		 position: relative;
+		 /* display: inline-block; */
+	}
 	
+	.dropdown-content {
+		 display: none;
+		 position: absolute;
+		 left: 114px;
+    	 top: 0px;
+		 background-color: #f1f1f1;
+		 min-width: 160px;
+		 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		 z-index: 1;
+	}
+	.dropdown-content1 {
+		 display: none;
+		 position: absolute;
+		 left: 114px;
+    	 top: 0px;
+		 background-color: #f1f1f1;
+		 min-width: 160px;
+		 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		 z-index: 1;
+	}
+	.dropdown-content2 {
+		 display: none;
+		 position: absolute;
+		 left: 114px;
+    	 top: 0px;
+		 background-color: #f1f1f1;
+		 min-width: 160px;
+		 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		 z-index: 1;
+	}
+	.dropdown-content a {
+		 color: black;
+		 padding: 12px 16px;
+		 text-decoration: none;
+		 display: block;
+	}
+	.dropdown-content1 a {
+		 color: black;
+		 padding: 12px 16px;
+		 text-decoration: none;
+		 display: block;
+	}
+	.dropdown-content2 a {
+		 color: black;
+		 padding: 12px 16px;
+		 text-decoration: none;
+		 display: block;
+	}
+	.product1{
+  display: none;
+  width: 600px;
+  height: 600px;
+  background-color: #ddd;
+  position: absolute;
+  left: 150px;
+	}
+	.product1_img{
+		padding: 50px 100px 10px 100px;
+	}
+	.productbutton1{
+		margin: 0px 5px 0px 150px
+	}
+	.productbutton3{
+		margin: 0px 5px 0px 150px
+	}
+	.info_product{
+		margin: 0px 20px 10px 20px;
+	}
+	.product2{
+  display: none;
+  width: 600px;
+  height: 600px;
+  background-color: #ddd;
+  position: absolute;
+  left: 150px;
+	}
+	.product2_img{
+		padding: 50px 100px 10px 100px;
+	}
+	.buyinfo{
+		display: none;
+		width: 400px;
+		height: 100px;
+		background-color:lemonchiffon;
+		margin: 20px 0px 0px 300px;
+		padding: 50px;
+	}
+	.dropdown-content a:hover {background-color: #ddd;}
+	.dropdown-content1 a:hover {background-color: #ddd;}
+	.dropdown-content2 a:hover {background-color: #ddd;}
+	.dropdown:hover .dropdown-content {display: block;}
+	.dropdown:hover .dropdown-content1 {display: block;}
+	.dropdown:hover .dropdown-content2 {display: block;}
+	.dropdown:hover .dropbtn1 {background-color: #3e8e41;}
+	.dropdown:hover .dropbtn2 {background-color: #3e8e41;}
+	.dropdown:hover .dropbtn3 {background-color: #3e8e41;}
+		.form{
+			display: flex;
+			flex-direction: column;
+			width: 400px;
+			background-color:lightgray ;
+			padding: 20px;
+			border-radius: 15px;
+		}
+	</style>
+	<div class="menu">
+		<div class="dropdown">
+			<button class="dropbtn1">Категория</button>
+			<div class="dropdown-content">
+			  <a class="jackdaniels" href="#">jack daniels</a>
+			  <a class="jameson" href="#">jameson</a>
+			  <a href="#">Товар 3</a>
+			</div>
+		 </div>
+		 <div class="dropdown">
+			 <button class="dropbtn2">Категория</button>
+			 <div class="dropdown-content1">
+				<a href="#">Товар 4</a>
+				<a href="#">Товар 5</a>
+				<a href="#">Товар 6</a>
+			 </div>
+		  </div><div class="dropdown">
+			 <button class="dropbtn3">Категория</button>
+			 <div class="dropdown-content2">
+				<a href="#">Товар 7</a>
+				<a href="#">Товар 8</a>
+				<a href="#">Товар 9</a>
+			 </div>
+		  </div>
+	</div>
+	<div class="product1">
+		<img class="product1_img" src="./img/jackdaniels.jpeg" alt="" width="300">
+		<p class="info_product">Jack Daniels destilleriet blev etableret i 1866 og er uden tvivl verdens bedst sælgende whiskey. Jack D bliver produceret på USA´s ældste destilleri i den lille by Lynchberg, i delstaten Tennessee. Master Distlleren hedder Jeff Arnett. Han er den syvende i rækken af Master Distillers siden selveste Jack Daniel "Him Self" stod for driften. Mottoet er, at leve op til Jack’s vise ord: “Every day we make it, we’ll make it the best we can”.</p>
+		<button class="productbutton1">Купить</button>
+		<button class="productbutton2">Назад</button>
+	</div>
+	<div class="product2">
+		<img class="product2_img" src="./img/jemeson.jpg" alt="" width="300">
+		<p class="info_product">Jameson Irish Whiskey is a blended Irish Whiskey.
+			What’s that we hear you say? Well first we take the best of pot still and fine grain whiskeys. Then we triple distill them- not because we have to because we want to as it gives it its signature smoothness. Finally we age them in oak casks for a minimum of 4 years. It’s where we recommend starting your whiskey journey. How to drink it? Any way you like. Just add mates and widen the circle. Triple distilled, twice as smooth, one of a kind.​</p>
+		<button class="productbutton3">Купить</button>
+		<button class="productbutton4">Назад</button>
+	</div>
+<div class="buyinfo">
+	<p class="buyinfo_window">Покупка оформлена. Приятного употребления.</p>
+</div>
+	<form class="form">
+		<label for="full_name">ПІБ покупця:</label>
+		<input type="text" id="full_name" name="full_name" required>
+	 
+		<label for="city">Місто:</label>
+		<select id="city" name="city" required>
+		  <option value="city1">Харків </option>
+		  <option value="city2">Київ </option>
+		  <option value="city3">Львів </option>
+		</select>
+	 
+		<label for="post_office">Склад Нової пошти для надсилання:</label>
+		<select id="post_office" name="post_office" required>
+			<option value="city1">Харків</option>
+			<option value="city2">Київ</option>
+			<option value="city3">Львів </option>
+		 </select>
+	  
+		<label for="payment">Післяплата або оплата банківською карткою:</label>
+		<input type="radio" id="payment_cod" name="payment" value="cod" required>
+		<label for="payment_cod">Післяплата</label>
+		<input type="radio" id="payment_card" name="payment" value="card" required>
+		<label for="payment_card">Оплата банківською карткою</label>
+	 
+		<label for="quantity">Кількість продукції, що купується:</label>
+		<input type="number" id="quantity" name="quantity" required>
+	 
+		<label for="comment">Коментар до замовлення:</label>
+		<textarea id="comment" name="comment"></textarea>
+	 
+		<input type="submit" value="Зареєструватися">
+	 </form>
+	 <script src="./script.js"></script>
 </body>
 </html>
