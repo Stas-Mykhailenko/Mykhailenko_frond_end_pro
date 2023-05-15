@@ -30,15 +30,18 @@ const secondtab = document.querySelector("#secondtab");
 const thirdtab = document.querySelector("#thirdtab");
 const fouthtab = document.querySelector("#fouthtab");
 const fifthtab = document.querySelector("#fifthtab");
+const product = document.querySelector("#product");
 const listorder_button1 = document.querySelector("#listorder_button1");
 const listorder_button2 = document.querySelector("#listorder_button2");
 let nameInput = null;
 let quantityInput = null;
 let choisePay = null;
 let post_office = post_office1.value;
+let choice;
 jameson.addEventListener("click", () => {
   dropdown.style.display = "none";
   product2.style.display = "inline-block";
+  choice = "jameson"
 });
 
 productbutton3.addEventListener("click", () => {
@@ -52,6 +55,7 @@ productbutton4.addEventListener("click", () => {
 jackdaniels.addEventListener("click", () => {
   dropdown.style.display = "none";
   product1.style.display = "inline-block";
+  choice = "jack daniels"
 });
 productbutton1.addEventListener("click", () => {
   product1.style.display = "none";
@@ -130,6 +134,7 @@ buttonreg.addEventListener("click", () => {
     listorder.style.display = "block";
     attention.style.display = "none";
   }
+  product.innerHTML = `Товар ${choice}`;
   firsttab.innerHTML = `ФИО ${nameInput}`;
   secondtab.innerHTML = `Місто ${city.value}`;
   thirdtab.innerHTML = `Відділеня НП  ${post_office}`;
