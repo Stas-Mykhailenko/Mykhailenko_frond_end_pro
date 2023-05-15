@@ -41,7 +41,7 @@ let choice;
 jameson.addEventListener("click", () => {
   dropdown.style.display = "none";
   product2.style.display = "inline-block";
-  choice = "jameson"
+  choice = "jameson";
 });
 
 productbutton3.addEventListener("click", () => {
@@ -55,7 +55,7 @@ productbutton4.addEventListener("click", () => {
 jackdaniels.addEventListener("click", () => {
   dropdown.style.display = "none";
   product1.style.display = "inline-block";
-  choice = "jack daniels"
+  choice = "jack daniels";
 });
 productbutton1.addEventListener("click", () => {
   product1.style.display = "none";
@@ -133,13 +133,15 @@ buttonreg.addEventListener("click", () => {
     form.style.display = "none";
     listorder.style.display = "block";
     attention.style.display = "none";
+    product.innerHTML = `Товар ${choice}`;
+    firsttab.innerHTML = `ФИО ${nameInput}`;
+    secondtab.innerHTML = `Місто ${city.value}`;
+    thirdtab.innerHTML = `Відділеня НП  ${post_office}`;
+    fouthtab.innerHTML = `Спосіб оплати ${choisePay}`;
+    fifthtab.innerHTML = `Кількість     ${quantityInput} шт.`;
+  } else {
+    attention.style.display = "block";
   }
-  product.innerHTML = `Товар ${choice}`;
-  firsttab.innerHTML = `ФИО ${nameInput}`;
-  secondtab.innerHTML = `Місто ${city.value}`;
-  thirdtab.innerHTML = `Відділеня НП  ${post_office}`;
-  fouthtab.innerHTML = `Спосіб оплати ${choisePay}`;
-  fifthtab.innerHTML = `Кількість     ${quantityInput} шт.`;
 });
 listorder_button1.addEventListener("click", () => {
   listorder.style.display = "none";
