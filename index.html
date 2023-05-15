@@ -173,20 +173,41 @@
       #post_office3 {
         display: none;
       }
-		.radio{
+      .radio {
+        display: flex;
+        justify-content: space-between;
+      }
+      #error {
+        display: none;
+        font-size: large;
+        color: red;
+      }
+      .attention {
+        display: none;
+        font-size: large;
+        margin-top: 20px;
+        color: red;
+      }
+      .colorradio_first {
+        color: #000000;
+      }
+      .colorradio_second {
+        color: #000000;
+      }
+      .full_namecolor {
+        display: flex;
+        flex-direction: column;
+        color: #000000;
+      }
+		.quantity_color{
 			display: flex;
-			justify-content: space-between;
+        flex-direction: column;
+        color: #000000;
 		}
-		#error{
+		.listorder{
 			display: none;
-			font-size: large;
-			color: red;
-		}
-		.attention{
-			display: none;
-			font-size: large;
-			margin-top: 20px;
-			color: red;
+			background-color: lightgray;
+			width: 300px;
 		}
     </style>
     <div class="menu">
@@ -252,9 +273,10 @@
       <p class="buyinfo_window">Покупка оформлена. Приятного употребления.</p>
     </div>
     <form class="form">
-      <label for="full_name">ПІБ покупця:</label>
-      <input type="text" id="full_name" name="full_name" required />
-
+      <div class="full_namecolor">
+        <label for="full_name">ПІБ покупця:</label>
+        <input type="text" id="full_name" name="full_name" required />
+      </div>
       <label for="city">Місто:</label>
       <select id="city" name="city" required>
         <option value="kharkiv">Харків</option>
@@ -264,25 +286,25 @@
       <div class="post">
         <label for="post_office1">Склад Нової пошти для надсилання:</label>
         <select id="post_office1" name="post_office" required>
-          <option value="city1">Харків НП1</option>
-          <option value="city2">Харків НП2</option>
-          <option value="city3">Харків НП3</option>
+          <option value="Харків НП1">Харків НП1</option>
+          <option value="Харків НП2">Харків НП2</option>
+          <option value="Харків НП3">Харків НП3</option>
         </select>
         <select id="post_office2" name="post_office" required>
-          <option value="city1">Київ НП1</option>
-          <option value="city2">Київ НП2</option>
-          <option value="city3">Київ НП3</option>
+          <option value="Київ НП1">Київ НП1</option>
+          <option value="Київ НП2">Київ НП2</option>
+          <option value="Київ НП3">Київ НП3</option>
         </select>
         <select id="post_office3" name="post_office" required>
-          <option value="city1">Львів НП1</option>
-          <option value="city2">Львів НП2</option>
-          <option value="city3">Львів НП3</option>
+          <option value="Львів НП1">Львів НП1</option>
+          <option value="Львів НП2">Львів НП2</option>
+          <option value="Львів НП3">Львів НП3</option>
         </select>
       </div>
       <div class="radio">
         <label for="payment">Післяплата або оплата банківською карткою:</label>
       </div>
-      <div class="radio">
+      <div class="radio colorradio_first">
         <label for="payment_card">Післяплата</label>
         <input
           type="radio"
@@ -292,7 +314,7 @@
           required
         />
       </div>
-      <div class="radio">
+      <div class="radio colorradio_second">
         <label for="payment_card2">Оплата банківською карткою</label>
         <input
           type="radio"
@@ -302,15 +324,26 @@
           required
         />
       </div>
-
-      <label for="quantity">Кількість продукції, що купується:</label>
-      <input type="text" id="quantity" name="quantity" required />
-		<div id="error">В поле можно вводити тільки цифри</div> 
-      <label id = "comment" for="comment">Коментар до замовлення:</label>
+      <div class="quantity_color">
+        <label for="quantity">Кількість продукції, що купується:</label>
+        <input type="text" id="quantity" name="quantity" required />
+      </div>
+      <div id="error">В поле можно вводити тільки цифри</div>
+      <label id="comment" for="comment">Коментар до замовлення:</label>
       <textarea id="comment" name="comment"></textarea>
-		<button id="buttonreg" type="button">Зареєструватися</button>
-      <div class="attention">ВВЕДИТЕ ВСЕ ПОЛЯ !!! </div>
+      <button id="buttonreg" type="button">Зареєструватися</button>
+      <div class="attention">ВВЕДИТЕ ВСЕ ПОЛЯ !!!</div>
     </form>
+<div class="listorder">
+	<p id="firsttab">ФИО</p>
+	<p id="secondtab">Місто</p>
+	<p id="thirdtab">Відділеня НП</p>
+	<p id="fouthtab">Спосіб оплати</p>
+	<p id="fifthtab">Кількість</p>
+	<button id="listorder_button1"type="button"> Підтвердити заказ</button>
+	<button id="listorder_button2" type="button"> Редагувати</button>
+</div>
+
     <script src="./script.js"></script>
   </body>
 </html>
