@@ -59,8 +59,8 @@ let itemMenu = "";
 let productlist = [];
 let countClickmenu = 0;
 let numberProduct ;
-
-(function addCatalog(list) {
+//открывает и закрывает кнопку меню
+function openmenu() {
   let catalogList = [];
   let countindex = 0;
   list.forEach((item) => {
@@ -71,9 +71,6 @@ let numberProduct ;
     countindex++;
     productlist.push(item.ListProduct);
   });
-})(list);
-
-function openmenu() {
   if (countClickmenu === 0) {
     countClickmenu = 1;
     body.innerHTML = ` <header class="header">
@@ -114,7 +111,7 @@ function openmenu() {
 	 </div>`;
   }
 }
-
+// Открывает продукт в зависимости категории
 function openProduct(array) {
   numberProduct = array;
   let nameProduct = [];
@@ -153,13 +150,13 @@ function openProduct(array) {
   ${itemProduct}
     </div>`;
 }
-
+// Открывает карточку товара в зависимости от продукта
 function openCard(numberCard){
   console.log(productlist[numberProduct][numberCard].card)
   body.innerHTML = `<div class = "card">
   <img src="${productlist[numberProduct][numberCard].card.img}" width="200" alt="">
   <p class="cardtext" >${productlist[numberProduct][numberCard].card.text}</p>
-  <p class ="cardcost">${productlist[numberProduct][numberCard].card.cost}"грн"</p>
+  <p class ="cardcost">${productlist[numberProduct][numberCard].card.cost}</p>
   <form action="/action_page.php">
     <label for="quantity">Количество:</label>
     <input type="number" id="quantity" name="quantity" min="1" max="5">
@@ -168,6 +165,7 @@ function openCard(numberCard){
   <a class ="buttonBack" href="#" onclick="backmenu()"> Вернуться на главную</a>
 </div>`;
 }
+// Возвращает на главную страницу
 function backmenu(){
   countClickmenu = 0
   body.innerHTML = `<header class="header">
