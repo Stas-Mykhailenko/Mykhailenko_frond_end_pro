@@ -36,10 +36,12 @@
 .infotext {
   padding: 40px 165px;
 }
+
 .catalog {
   position: relative;
   width: 150px;
-  top: -836px;
+  top: -854px;
+  left: 27px;
   background-color: #df6760;
   display: flex;
   flex-direction: column;
@@ -52,10 +54,10 @@
   cursor: pointer;
 }
 .product {
-  position: relative;
+  position: absolute;
   width: 150px;
-  top: -10px;
-  left: 152px;
+  top: 130px;
+    left: 183px;
   background-color: #df6760;
   display: flex;
   flex-direction: column;
@@ -68,7 +70,42 @@
   cursor: pointer;
 }
 
-
+.card{
+  background-color: white;
+  width: 500px;
+  position: absolute;
+  left: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+  padding: 10px;
+}
+.cardtext{
+  padding: 10px 500 px;
+}
+.cardcost{ 
+  font-family: "DM Sans" "Arial" sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color: blue;
+ }
+ .buttonOerder{
+  text-decoration: none;
+  color: black;
+  background-color: #df6760;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+ }
+ .buttonBack{
+  text-decoration: none;
+  color: black;
+  background-color: #df6760;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+ }
 .notactive{
 	display: none;
 }
