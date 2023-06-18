@@ -54,8 +54,8 @@
 .product {
   position: relative;
   width: 150px;
-  top: -874px;
-  left: 169px;
+  top: -10px;
+  left: 152px;
   background-color: #df6760;
   display: flex;
   flex-direction: column;

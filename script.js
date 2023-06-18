@@ -59,7 +59,7 @@ let productlist = "";
 (function addBack(array) {
   let arraycatalog = [];
   array.forEach((element) => {
-    let elementcatalog = `<p id= ${element.nameidCategori} class="catalog-style"> ${element.nameCategori} </p>`;
+    let elementcatalog = `<p id= ${element.nameidCategori} class="catalog-style" onclick="openproduct(${element.nameidCategori})"> ${element.nameCategori} </p>`;
     arraycatalog.push(elementcatalog);
     categorilist = arraycatalog.join("");
   });
@@ -86,9 +86,20 @@ function openmenu() {
 	  </div>`);
 }
 
-function openproduct() {}
+function openproduct(e) {
+ if(e !== undefined){
+  console.log(e.id)
+  e.innerHTML = ` <div class="product">
+      <p id="prod-1" class="product-style">fgdndf</p>
+    </div>`
+
+  e.addEventListener("click", function (e){
+    console.log(e)
+      })
+ }
+}
 function firstscreen() {
-  return (body.innerHTML = `
+  return body.innerHTML = `
 	<header class="header">
 	  <a class="menu" href="#"> Все товары</a>
 	  <a class="myorder" href="#"> Мои заказы</a>
@@ -102,7 +113,7 @@ function firstscreen() {
 		 известен также японский виски. У нас вы найдете огромный ассортимент
 		 солодового и купажированного виски превосходного качества.
 	  </p>
-	  <img class="infoimg" src="./img/firstpage.png" alt="" />`);
+	  <img class="infoimg" src="./img/firstpage.png" alt="" />`;
 }
 
 menu.addEventListener("click", function (e) {
