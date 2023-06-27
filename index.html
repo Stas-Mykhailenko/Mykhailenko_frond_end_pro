@@ -28,26 +28,80 @@
 		</p>
 		<img class="infoimg" src="./img/firstpage.png" alt="" />
 	 </div>
-   <img src="./img/captanmorgan.jpg" alt="">
-    <!-- <div class="catalog ">
-      <p  class="catalog-style">виски</p>
-      <p  class="catalog-style">виски</p>
-     
-    </div> -->
-	 <!-- <div class="product">
-      <p id="prod-1" class="product-style">fgdndf</p>
-    </div> --> 
-     <!-- <div class = "card">
-      <img src="./img/jemeson.jpg" width="200" alt="">
-      <p class="cardtext" >tdhdfhfdhf</p>
-      <p class ="cardcost">532535</p>
-      <form action="/action_page.php">
-        <label for="quantity">Количество:</label>
-        <input type="number" id="quantity" name="quantity" min="1" max="5">
-      </form>
-      <a class ="buttonOerder" href="#" onclick=""> Оформить покупку</a>
-      <a class ="buttonBack" href="#" onclick=""> Вернуться на главную</a>
-    </div> -->
 	 <script src="./script.js"></script>
+
+   <!-- <form class="form" action="/submit" method="post">
+    <label for="full-name">ФИО:</label>
+    <input type="text" id="full-name" name="full-name" pattern="[A-Za-zА-Яа-я\s]+" required><br><br>
+
+    <label for="city">Город:</label>
+    <select id="city" name="city" required>
+      <option value="">Выберите город</option>
+      <option value="Москва">Москва</option>
+      <option value="Санкт-Петербург">Санкт-Петербург</option>
+      <option value="Новосибирск">Новосибирск</option>
+    </select><br><br>
+
+    <label for="post-office">Отделение почты:</label>
+    <select id="post-office" name="post-office" required>
+      <option value="">Выберите отделение почты</option>
+      <option value="Отделение 1">Отделение 1</option>
+      <option value="Отделение 2">Отделение 2</option>
+      <option value="Отделение 3">Отделение 3</option>
+
+    </select><br><br>
+
+    <label for="quantity">Количество товара:</label>
+    <input type="number" id="quantity" name="quantity" required><br><br>
+
+    <label for="payment-method">Способ оплаты:</label>
+    <input type="radio" id="payment-method-1" name="payment-method" value="Наличные" required>
+    <label for="payment-method-1">Наличные</label>
+    <input type="radio" id="payment-method-2" name="payment-method" value="Карта">
+    <label for="payment-method-2">Карта</label><br><br>
+
+    <label for="comments">Комментарий:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+    <input type="submit" value="Купить">
+    <button onclick="backmenu()">Вернуться на главное меню</button>
+  </form>
+  <div class="orders">
+    <p class="orderinfo"><span>jemeson</span><span>кол </span><span>2</span><span>1000грн</span><a href="" onclick=""><img src="./img/17047.png" alt="" width="20px"></a></p>
+    <p class="orderinfo"><span>jemeson</span><span>кол </span><span>3</span><span>1000грн</span><a href=""><img src="./img/17047.png" alt="" width="20px"></a></p>
+    <p class="orderinfo"><span>jemeson</span><span>кол </span><span>4</span><span>1000грн</span><a href=""><img src="./img/17047.png" alt="" width="20px"></a></p>
+    <p class="orderinfo"><span>jemeson</span><span>кол </span><span>5</span><span>1000грн</span><a href=""><img src="./img/17047.png" alt="" width="20px"></a></p>
+    <a class= "myorderbutton" href="">Главное меню</a>
+  </div> -->
+  <div class="form">
+    <p>Введите ФИО</p>
+    <input type="text" id="full-name" name="full-name" pattern="[A-Za-zА-Яа-я\s]+" required>
+    <label for="city">Город:</label>
+    <select id="city" name="city" required>
+      <option value="">Выберите город</option>
+      <option value="Москва">Москва</option>
+      <option value="Санкт-Петербург">Санкт-Петербург</option>
+      <option value="Новосибирск">Новосибирск</option>
+    </select>
+    <label for="post-office">Отделение почты:</label>
+    <select id="post-office" name="post-office" required>
+      <option value="">Выберите отделение почты</option>
+      <option value="Отделение 1">Отделение 1</option>
+      <option value="Отделение 2">Отделение 2</option>
+      <option value="Отделение 3">Отделение 3</option>
+    </select>
+    <label for="quantity">Количество товара:</label>
+    <input type="number" id="quantity" name="quantity" required>
+    <label for="payment-method">Способ оплаты:</label>
+    <input type="radio" id="payment-method-1" name="payment-method" value="Наличные" required>
+    <label for="payment-method-1">Наличные</label>
+    <input type="radio" id="payment-method-2" name="payment-method" value="Карта">
+    <label for="payment-method-2">Карта</label><br><br>
+
+    <label for="comments">Комментарий:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+    <button onclick="endOrder()">Купить</button>
+   <button onclick="backmenu()">Вернуться на главное меню</button>
+  </div>
   </body>
 </html>

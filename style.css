@@ -106,6 +106,50 @@
   margin-top: 10px;
   border-radius: 5px;
  }
+ .form{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  background-color: lightgray;
+  border-radius: 20px;
+  padding: 10px 20px;
+ }
+.orders{
+  position: absolute;
+  left: 150px;
+  background-color: azure;
+ padding: 20px;
+ width:400px;
+ border-radius: 10px;
+ display: flex;
+ flex-direction: column;
+}
+.orderinfo{
+  width: 300px;
+  
+ display: flex;
+ justify-content: space-around;
+ color: #df6760;
+ background-color:lightgoldenrodyellow;
+ border-radius: 5px;
+ margin: 3px;
+ padding: 5px;
+}
+.myorderbutton{
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 20px 111px;
+}
+.myorderbutton:hover{
+  color: #df6760;
+}
 .notactive{
 	display: none;
 }
+.full-name-mistake{background-color: #df6760;}
+.city-mistake{background-color: #df6760;}
+.post-office-mistake{background-color: #df6760;}
+.quantity-mistake{background-color: #df6760;}
