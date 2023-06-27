@@ -70,7 +70,7 @@ let itemMenu = "";
 let productlist = [];
 let countClickmenu = 0;
 let numberProduct;
-
+let countMyOrder = 0;
 //открывает и закрывает кнопку меню
 function openmenu() {
   let catalogList = [];
@@ -238,13 +238,10 @@ function backmenu() {
   <img class="infoimg" src="./img/firstpage.png" alt="" />
  </div>`;
 }
-let countMyOrder =0;
+
 function endOrder() {
- 
-  const user = { name: 'Stas', age: 23 };
-  console.log(countMyOrder)
-  localStorage.setItem(`'${countMyOrder}'`, JSON.stringify(user));
-  countMyOrder+=1
+  const user = { name: "Stas", age: 23 };
+
   let inputName = document.getElementById("full-name");
   console.log(Boolean(inputName.value));
   let inputCity = document.getElementById("city");
@@ -261,8 +258,10 @@ function endOrder() {
     inputPost.classList.add("post-office-mistake");
   } else if (Boolean(inputQuantity.value) === false) {
     inputQuantity.classList.add("quantity-mistake");
-  }else{
-      body.innerHTML = `<header class="header">
+  } else {
+    localStorage.setItem(`'${countMyOrder}'`, JSON.stringify(user));
+    countMyOrder += 1;
+    body.innerHTML = `<header class="header">
       <a class ="menu" href="#" onclick="openmenu()"> Все товары</a>
       <a class ="myorder" href="#"> Мои заказы</a>
      </header>
@@ -277,8 +276,6 @@ function endOrder() {
       </p>
       <img class="infoimg" src="./img/firstpage.png" alt="" />
      </div>`;
-   
   }
-  
 }
 function putLocalstor() {}
