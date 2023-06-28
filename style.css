@@ -136,6 +136,30 @@
   padding: 10px;
   border-radius: 20px;
 }
+#infoorderf{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  background-color: beige;
+  position: absolute;
+  top: 150px;
+ left: 150px;
+ padding:20px;
+}
+.infoorderfull{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.infoorderbutton{
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 20px;
+  width:70% ;
+}
 .full-name-mistake{background-color: #df6760;}
 .city-mistake{background-color: #df6760;}
 .post-office-mistake{background-color: #df6760;}

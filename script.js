@@ -72,6 +72,7 @@ let productlist = [];
 let countClickmenu = 0;
 let numberProduct;
 let countMyOrder = 0;
+let index = 0;
 //открывает и закрывает кнопку меню
 function openmenu() {
   let catalogList = [];
@@ -177,6 +178,7 @@ function openFormOrder(cost, nameproduct) {
   let countcity = 0;
   let city;
   let value = "";
+  
   infoFormPost.forEach((item) => {
     arraycity.push(
       `<option value='${infoFormPost.indexOf(item)}' >${item.city}</option>`
@@ -225,6 +227,7 @@ function post() {
 // Возвращает на главную страницу
 function backmenu() {
   countClickmenu = 0;
+   index = 0;
   body.innerHTML = `<header class="header">
   <a class ="menu" href="#" onclick="openmenu()"> Все товары</a>
   <a class ="myorder" href="#" onclick="openmyorders()"> Мои заказы</a>
@@ -248,7 +251,7 @@ function endOrder(cost, nameproduct) {
   let inputPost = document.getElementById("post-office");
   let inputQuantity = document.getElementById("quantity");
 
-  if (Boolean(inputQuantity.value) === false) {
+  if (Boolean(inputName.value) === false) {
     inputName.classList.add("full-name-mistake");
   }
   if (Boolean(inputCity.value) === false) {
@@ -266,6 +269,7 @@ function endOrder(cost, nameproduct) {
       post: `${inputPost.value}`,
       cost: `${cost}`,
       quantity: `${inputQuantity.value}`,
+      buyer: `${inputName.value}`,
     };
     localStorage.setItem(`${countMyOrder}`, JSON.stringify(orders));
     countMyOrder += 1;
@@ -288,13 +292,11 @@ function endOrder(cost, nameproduct) {
   }
 }
 //Открывает окно с заказами, данные беруться с Localstorage
-let index = 0
+
 function openmyorders() {
   let arrayorders = [];
   let cardorder;
   let order = JSON.parse(localStorage.getItem(`${index}`));
-  let addlong
-  console.log(index)
   if (localStorage.length === 0) {
     body.innerHTML = `<header class="header">
     <a class ="menu" href="#" onclick="openmenu()"> Все товары</a>
@@ -317,53 +319,45 @@ function openmyorders() {
     <a class ="myorderbutton" href="#" onclick="backmenu()"> Вернуться на главную</a>
     <a class ="myorderbutton" href="#" onclick="cleanorders()"> Очистить заказы</a>
        </div>`;
-  }if(order === null){
-    index++
-    openmyorders()
-  }else {
-    for (let i = 0; i < localStorage.length; i++) {
+  } else if (order === null && localStorage.length >= index) {
+    index++;
+    openmyorders();
+  } else {
+    for (let i = 0; i <= localStorage.length; i++) {
       order = JSON.parse(localStorage.getItem(`${index}`));
-      arrayorders.push(`
-    <div class="ordercard">
-    <p>${order.name}</p>
-    <p>${order.city}</p>
-    <p>${order.post}</p>
-    <p>${order.cost}</p>
-    <p>${order.quantity} шт</p>
-    <a href="" onclick="deleteorder(${index})"><img src="./img/17047.png" alt="" width="20px"></a>
-  </div>`);
-      cardorder = arrayorders.join("");
+      if (order === null) {
+        index++;
+      } else {
+        arrayorders.push(`
+      <div class="ordercard">
+      <p>${order.name}</p>
+      <p>${order.city}</p>
+      <p>${order.post}</p>
+      <p>${order.cost}</p>
+      <p>${order.quantity} шт</p>
+      <a href="" onclick="deleteorder(${index})"><img src="./img/17047.png" alt="" width="20px"></a>
+    </div>`);
+        cardorder = arrayorders.join("");
+        index++;
+      }
     }
-    body.innerHTML = `<header class="header">
-  <a class ="menu" href="#" onclick="openmenu()"> Все товары</a>
-  <a class ="myorder" href="#"> Мои заказы</a>
-  </header>
-  <div class="info" >
-  <h1 class="infotitle">Виски</h1>
-  <p class="infotext">
-    Виски — наименование крепкого алкогольного напитка, получаемого методом
-    дистилляции зернового сусла на основе ячменя, пшеницы, ржи или кукурузы.
-    Основные объемы виски производят в Шотландии, Ирландии, США и Канаде,
-    известен также японский виски. У нас вы найдете огромный ассортимент
-    солодового и купажированного виски превосходного качества.
-  </p>
-  <img class="infoimg" src="./img/firstpage.png" alt="" />
+    body.innerHTML = `
   </div>
   <div class="orders">
   ${cardorder}
   <a class ="myorderbutton" href="#" onclick="backmenu()"> Вернуться на главную</a>
   <a class ="myorderbutton" href="#" onclick="cleanorders()"> Очистить заказы</a>
      </div>`;
-     index = 0
+    index++;
   }
-
 }
+
 //Очищает историю заказов
 function cleanorders() {
   localStorage.clear();
   backmenu();
 }
 //Удаляет выбраный заказ с истории
-function deleteorder(cardorder){
-  localStorage.removeItem(`${cardorder}`)
+function deleteorder(cardorder) {
+  localStorage.removeItem(`${cardorder}`);
 }
