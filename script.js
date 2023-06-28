@@ -288,11 +288,14 @@ function endOrder(cost, nameproduct) {
   }
 }
 //Открывает окно с заказами, данные беруться с Localstorage
+let index = 0
 function openmyorders() {
   let arrayorders = [];
   let cardorder;
-  let order = JSON.parse(localStorage.getItem("0"));
-  if (order === null) {
+  let order = JSON.parse(localStorage.getItem(`${index}`));
+  let addlong
+  console.log(index)
+  if (localStorage.length === 0) {
     body.innerHTML = `<header class="header">
     <a class ="menu" href="#" onclick="openmenu()"> Все товары</a>
     <a class ="myorder" href="#"> Мои заказы</a>
@@ -309,12 +312,16 @@ function openmyorders() {
     <img class="infoimg" src="./img/firstpage.png" alt="" />
     </div>
     <div class="orders">
+    <p>У Вас нет заказов</p>
     <div class="ordercard"> </div>
     <a class ="myorderbutton" href="#" onclick="backmenu()"> Вернуться на главную</a>
     <a class ="myorderbutton" href="#" onclick="cleanorders()"> Очистить заказы</a>
        </div>`;
-  } else {
-    for (let index = 0; index < localStorage.length; index++) {
+  }if(order === null){
+    index++
+    openmyorders()
+  }else {
+    for (let i = 0; i < localStorage.length; i++) {
       order = JSON.parse(localStorage.getItem(`${index}`));
       arrayorders.push(`
     <div class="ordercard">
@@ -323,6 +330,7 @@ function openmyorders() {
     <p>${order.post}</p>
     <p>${order.cost}</p>
     <p>${order.quantity} шт</p>
+    <a href="" onclick="deleteorder(${index})"><img src="./img/17047.png" alt="" width="20px"></a>
   </div>`);
       cardorder = arrayorders.join("");
     }
@@ -346,10 +354,16 @@ function openmyorders() {
   <a class ="myorderbutton" href="#" onclick="backmenu()"> Вернуться на главную</a>
   <a class ="myorderbutton" href="#" onclick="cleanorders()"> Очистить заказы</a>
      </div>`;
+     index = 0
   }
+
 }
 //Очищает историю заказов
 function cleanorders() {
   localStorage.clear();
   backmenu();
+}
+//Удаляет выбраный заказ с истории
+function deleteorder(cardorder){
+  localStorage.removeItem(`${cardorder}`)
 }
