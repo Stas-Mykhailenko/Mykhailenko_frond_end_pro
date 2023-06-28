@@ -115,39 +115,26 @@
   padding: 10px 20px;
  }
 .orders{
+  width: 500px;
+  background: lightgray;
+  padding: 20px;
   position: absolute;
-  left: 150px;
-  background-color: azure;
- padding: 20px;
- width:400px;
- border-radius: 10px;
- display: flex;
- flex-direction: column;
+  top: 150px;
+  left: 350px;
+  border-radius: 10px;
 }
-.orderinfo{
-  width: 300px;
+.ordercard{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
   
- display: flex;
- justify-content: space-around;
- color: #df6760;
- background-color:lightgoldenrodyellow;
- border-radius: 5px;
- margin: 3px;
- padding: 5px;
 }
 .myorderbutton{
-  background-color: black;
-  color: white;
   text-decoration: none;
-  padding: 10px 15px;
+  color: white;
+  background-color: black;
+  padding: 10px;
   border-radius: 20px;
-  margin: 20px 111px;
-}
-.myorderbutton:hover{
-  color: #df6760;
-}
-.notactive{
-	display: none;
 }
 .full-name-mistake{background-color: #df6760;}
 .city-mistake{background-color: #df6760;}
